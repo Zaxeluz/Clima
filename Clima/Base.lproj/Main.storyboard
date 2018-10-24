@@ -18,30 +18,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ciudad Obregón" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnM-n2-fB1">
-                                <rect key="frame" x="16" y="20" width="126" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciudad Obregón" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnM-n2-fB1">
+                                <rect key="frame" x="16" y="40" width="343" height="36.5"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9h-7X-RUS">
-                                <rect key="frame" x="16" y="49" width="18" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9h-7X-RUS">
+                                <rect key="frame" x="16" y="91" width="343" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b80-Pu-9nM">
+                                <rect key="frame" x="153" y="607" width="68" height="30"/>
+                                <state key="normal" title="Actualizar"/>
+                                <connections>
+                                    <action selector="doTapActualizarClima:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HDO-Ea-J0i"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mh2-Kv-jeI">
+                                <rect key="frame" x="177" y="564" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor del Dolar en PESO MEXICANO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2E-Nr-rJa">
+                                <rect key="frame" x="23.5" y="333.5" width="328" height="20"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGz-Xv-zXZ">
+                                <rect key="frame" x="16" y="382" width="343" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P2E-Nr-rJa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="13H-LL-aJl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b80-Pu-9nM" secondAttribute="bottom" constant="30" id="3Gg-bJ-jAd"/>
+                            <constraint firstItem="yGz-Xv-zXZ" firstAttribute="top" secondItem="P2E-Nr-rJa" secondAttribute="bottom" constant="28.5" id="6od-OD-gnc"/>
+                            <constraint firstItem="dnM-n2-fB1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7SP-NL-4Rz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnM-n2-fB1" secondAttribute="trailing" constant="16" id="9RQ-nM-BBv"/>
+                            <constraint firstItem="b80-Pu-9nM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FIw-35-naz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yGz-Xv-zXZ" secondAttribute="trailing" constant="16" id="QTM-Ua-G2p"/>
+                            <constraint firstItem="b80-Pu-9nM" firstAttribute="top" secondItem="mh2-Kv-jeI" secondAttribute="bottom" constant="23" id="VKF-AY-GHT"/>
+                            <constraint firstItem="s9h-7X-RUS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WQM-hx-ZdL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s9h-7X-RUS" secondAttribute="trailing" constant="16" id="faV-Hq-rHV"/>
+                            <constraint firstItem="yGz-Xv-zXZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fi0-BP-akY"/>
+                            <constraint firstItem="yGz-Xv-zXZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ove-Rl-Wwh"/>
+                            <constraint firstItem="P2E-Nr-rJa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="q68-6Y-Q0o"/>
+                            <constraint firstItem="dnM-n2-fB1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="rx4-0E-GU0"/>
+                            <constraint firstItem="s9h-7X-RUS" firstAttribute="top" secondItem="dnM-n2-fB1" secondAttribute="bottom" constant="14.5" id="s9B-Li-Dxj"/>
+                            <constraint firstItem="mh2-Kv-jeI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ueI-oI-sJ8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="lblGrados" destination="8bC-Xf-vdC" id="J2Y-ws-PtO"/>
+                        <outlet property="aiCargarClima" destination="mh2-Kv-jeI" id="jyX-hj-1vr"/>
+                        <outlet property="lblGrados" destination="s9h-7X-RUS" id="Npl-ia-FQK"/>
+                        <outlet property="lblPrecioMexicano" destination="yGz-Xv-zXZ" id="duu-0q-fn4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
         </scene>
     </scenes>
 </document>
